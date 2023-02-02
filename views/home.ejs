@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>
+            <%= title %> 
+        </title>
+        <link rel="stylesheet" type="text/css" href="/css/home.css">
+        <script src="https://kit.fontawesome.com/0aa8ee66f8.js" crossorigin="anonymous"></script>
+    </head>
+    <body>
+        <h1>
+            <%= title %> 
+        </h1>
+        <form action="/create-task" method="POST">
+            <div id="description-div">
+                <label for="task">Description</label>
+                <br>
+                <input type="text" id="task" name="task" placeholder="What do you need to do?">
+            </div>
+            <div class="details">
+                <label for="category">Category</label>
+                <br>
+                <select id="category" name="category" place>
+                    <option value="" disabled selected>Choose a Category</option>
+                    <option value="Personal">Personal</option>
+                    <option value="work">Work</option>
+                    <option value="Home">Home</option>
+                    <option value="School">School</option>
+                    <option value="Others">Others</option>
+                </select>
+            </div>
+            <div class="details">
+                <label for="date">Due Date</label>
+                <br>
+                <input type="date" id="date" name="date" >
+            </div>
+            <hr>
+
+            <div class="actions"> 
+                <button formaction="/create-task" type="submit" id="add">
+                    <span><i class="fa-solid fa-plus"></i></span>
+                    ADD TASK
+                </button>
+            </div>
+        </form>
+        <div id="task-list">
+            <% for(let i of task_list){ %>
+                <hr>
+                <div class="task-a">
+                    <div class="task-details" style="margin-left:50px">
+                        <h3><%= i.task %> </h3>
+                        <p><%= i.date %> </p>
+                    </div>
+                    <div class="cat">
+                        <h3><%= i.category %> </h3>
+                    </div>
+                    <div class="delete">
+                        <a href="/delete-task/?id=<%= i._id %> ">
+                            <i class="fa-solid fa-trash"></i>
+                        </a>
+                    </div>
+                </div>
+            <% } %>  
+        </div>
+        <hr>
+        
+
+
+        <script type="text/javascript" src="/js/home.js"></script>
+    </body>
+</html>

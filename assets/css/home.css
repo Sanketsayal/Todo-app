@@ -1,0 +1,120 @@
+body{
+    margin: 0;
+    font-family: cursive;
+    height: 100vh;
+    padding: 0;
+    width: 98.9vw;
+}
+hr{
+    border: 0;
+    border-bottom: 2px solid grey;
+    margin: 0;
+}
+h1{
+    text-align: center;
+}
+input{
+    border: 0;
+    height: 50px;
+    width: 95%;
+    font-size: 1.2rem;
+    background-color: inherit;
+}
+input:focus{
+    outline: none;
+    color: black;
+}
+#description-div{
+    border-top: 2px solid grey;
+    border-bottom: 2px solid grey;
+    border-right: 2px solid grey;
+    height: 100px;
+    padding-left: 30px;
+}
+
+label{
+    font-size: 1.5rem;
+}
+
+.details{
+    display: inline-block;
+    width: 47.761%;
+    padding-left: 30px;
+    border-right: 2px solid grey;
+    height: 100px;
+}
+select{
+    width: 90%;
+    height: 50px;
+    border: 0;
+    font-size: 1.2rem;
+
+}
+select:focus{
+    outline: none;
+}
+#actions{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 30%;
+}
+#add{
+    background-color: black;
+    color: white;
+    width:300px;
+    height:80px;
+    display: inline-block;
+    font-size: 2rem;
+}
+#delete{
+    background-color: red;
+    color: white;
+    width:300px;
+    height:80px;
+    display: inline-block;
+    font-size: 2rem;
+    margin-left: 5%;
+}
+
+.actions{
+    margin: 30px 0;
+    text-align: center;
+}
+
+.list-check{
+    display: inline-block;
+    height: 20px;
+    width: 20px;
+}
+
+.task-a{
+    display: flex;
+    align-items: center;
+}
+.task-details{
+    width: 50%;
+}
+.cat{
+    width: 120px;
+    height: 60px;
+    margin-left: 25%;
+    background-color: blueviolet;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 1rem;
+}
+.cat h3{
+    margin: 0;
+}
+
+.delete{
+    height: 20px;
+    font-size: 1.5rem;
+    margin-left: 5%;
+}
+.delete i{
+    color: red;
+}
